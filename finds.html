@@ -1,215 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hearth & Hollow 🪵🌿</title>
+
   <link rel="icon" type="image/png" href="favicon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-  #musicButton {
-  position: fixed;
-  bottom: 25px;
-  left: 25px;
-  background: #a3b18a;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
+
+*{
+  box-sizing:border-box;
 }
 
-#musicButton:hover {
-  background: #8ca081;
-}
-    <audio id="backgroundMusic" loop>
-  <source src="cozy-music.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="toggleMusic()" id="musicButton">
-  🎵 Play Music
-</button>
-
-<script>
-function toggleMusic() {
-  let music = document.getElementById("backgroundMusic");
-  let button = document.getElementById("musicButton");
-
-  if (music.paused) {
-    music.play();
-    button.innerHTML = "⏸ Pause Music";
-  } else {
-    music.pause();
-    button.innerHTML = "🎵 Play Music";
-  }
-}
-</script>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #fdf6f0, #fffaf5);
-      color: #3e3a36;
-    }
-
-    header {
-      background: #fdf6f0;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      font-family: 'Playfair Display', serif;
-      color: #5c5a51;
-    }
-
-    nav { margin-top: 12px; }
-    nav a {
-      text-decoration: none;
-      color: #7b8a72;
-      font-weight: 600;
-      margin: 0 15px;
-      transition: 0.3s;
-    }
-    nav a:hover { color: #a3b18a; }
-
-    .section { padding: 60px 25px; max-width: 900px; margin: auto; }
-
-    .shop-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .shop-item {
-      background: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .shop-item:hover { transform: translateY(-4px); }
-
-    .shop-item img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-bottom: 12px;
-    }
-
-.shop-item a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 24px;
-  background: #a3b18a;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+body{
+  margin:0;
+  font-family:'Quicksand',sans-serif;
+  background:linear-gradient(135deg,#fdf6f0,#fffaf5);
+  color:#3e3a36;
 }
 
-.shop-item a:hover {
-  background: #8ca081;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+header{
+  background:#fdf6f0;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 4px 8px rgba(0,0,0,.05);
 }
-    footer { text-align: center; padding: 25px; color: #9e9a91; font-size: 14px; }
+
+header h1{
+  margin:0;
+  font-size:32px;
+  font-family:'Playfair Display',serif;
+  color:#5c5a51;
+}
+
+nav{
+  margin-top:12px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#7b8a72;
+  font-weight:600;
+  margin:0 15px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#a3b18a;
+}
+
+.section{
+  padding:60px 25px;
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.shop-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:35px;
+}
+
+.shop-item{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 8px 18px rgba(0,0,0,.07);
+  transition:.3s;
+}
+
+.shop-item:hover{
+  transform:translateY(-5px);
+}
+
+.shop-item img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+
+.shop-item h3{
+  color:#5c5a51;
+}
+
+.shop-item p{
+  line-height:1.6;
+}
+
+.shop-item a{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 24px;
+  background:#a3b18a;
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.shop-item a:hover{
+  background:#8ca081;
+  transform:translateY(-3px);
+}
+
+#musicButton{
+  position:fixed;
+  bottom:25px;
+  left:25px;
+  background:#a3b18a;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:30px;
+  font-family:'Quicksand',sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 6px 15px rgba(0,0,0,.15);
+  transition:.3s;
+  z-index:1000;
+}
+
+#musicButton:hover{
+  background:#8ca081;
+  transform:translateY(-3px);
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#9e9a91;
+  font-size:14px;
+}
+
+@media(max-width:768px){
+
+header h1{
+  font-size:26px;
+}
+
+nav a{
+  display:inline-block;
+  margin:8px;
+}
+
+#musicButton{
+  left:50%;
+  transform:translateX(-50%);
+}
+
+#musicButton:hover{
+  transform:translateX(-50%) translateY(-3px);
+}
+
+}
+
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <h1> Hearth & Hollow 🪵🌿</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="gallery.html">Gallery</a>
-   <a href="finds.html">Finds</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h2>🌿 Hearth & Hollow Finds</h2>
-<p>
-Welcome to my collection of cozy discoveries! Here you'll find beautiful boho-inspired pieces that I've personally picked because they match the Hearth & Hollow aesthetic. Click any item to visit the original shop.
-</p>
-
- <div class="shop-item">
-  <img src="images/beige-falla-bow.jpg" alt="Beige Falla Bow">
-  <p>Beige Falla Bow 🎀</p>
-  <a href="https://easy-clothes.us/products/beige-falla-bow?variant=45488363503852" target="_blank">✨ View Find</a>
-</div>
- <div class="shop-item">
-  <img src="images/personalized-notebook.jpg" alt="Personalized Leather Notebook">
-  <h3>Personalized Leather Notebook 📖</h3>
-  <p>A beautiful custom journal with a birth flower design, perfect for writing, planning, or keeping special memories.</p>
-  <a href="https://a.co/d/0a0VljZh" target="_blank">✨ View Find</a>
-</div>
- <div class="shop-item">
-  <img src="images/boho-comforter.jpg" alt="Boho Farmhouse Comforter Set">
-  <p><strong>Boho Farmhouse Comforter Set 🌿</strong></p>
-  <p>A cozy neutral comforter that creates a warm, relaxed bedroom.</p>
-  <a href="https://www.target.com/p/3pcs-tufted-boho-farmhouse-shabby-chic-embroidery-beige-oversized-queen-size-comforter-set-bedsure/-/A-1008335587" target="_blank">✨ View Find</a>
-</div>
-<div class="shop-item">
-  <img src="images/boho-hair-ties.jpg" alt="Boho Hair Ties Bracelets">
-
-  <h3>Boho Hair Ties Bracelets 🎀</h3>
-
-  <p>
-    A cute set of braided hair ties that double as bracelets! 
-    Perfect for everyday hairstyles and adding a little boho detail to any look.
-  </p>
-
-  <a href="https://a.co/d/09IIrqSz" target="_blank">✨ View Find</a>
-</div>
-  <div class="shop-item">
-  <img src="images/boho-curtains.jpg" alt="Boho Floral Blackout Curtains">
-
-  <h3>Boho Floral Blackout Curtains 🌿</h3>
-
-  <p>
-    These cozy linen-texture curtains add a warm cottage feel with soft floral details and beige tassels. 
-    Perfect for creating a peaceful Hearth & Hollow inspired space.
-  </p>
-
-  <a href="YOUR AMAZON LINK HERE" target="_blank">✨ View Find</a>
-</div>
-</section>
-
-<footer>
-  ✨ Made by Patty • 2026 ✨
-</footer>
 <audio id="backgroundMusic" loop>
   <source src="cozy-music.mp3" type="audio/mpeg">
 </audio>
 
 <button onclick="toggleMusic()" id="musicButton">
-  🎵 Play Music
+🎵 Play Music
 </button>
 
-<script>
-function toggleMusic() {
-  let music = document.getElementById("backgroundMusic");
-  let button = document.getElementById("musicButton");
+<header>
 
-  if (music.paused) {
-    music.play();
-    button.innerHTML = "⏸ Pause Music";
-  } else {
-    music.pause();
-    button.innerHTML = "🎵 Play Music";
-  }
+<h1>🪵 Hearth & Hollow 🌿</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="gallery.html">Gallery</a>
+<a href="finds.html">Finds</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="section">
+
+<h2>🌿 Hearth & Hollow Finds</h2>
+
+<p>
+Welcome to my collection of cozy discoveries! Here you'll find beautiful boho-inspired pieces that I've personally picked because they match the Hearth & Hollow aesthetic. Click any item to visit the original shop.
+</p>
+
+<div class="shop-grid">
+
+<div class="shop-item">
+<img src="images/beige-falla-bow.jpg" alt="Beige Falla Bow">
+<h3>Beige Falla Bow 🎀</h3>
+<p>A beautiful neutral bow that's perfect for cozy hairstyles.</p>
+<a href="https://easy-clothes.us/products/beige-falla-bow?variant=45488363503852" target="_blank">✨ View Find</a>
+</div>
+
+<div class="shop-item">
+<img src="images/personalized-notebook.jpg" alt="Personalized Leather Notebook">
+<h3>Personalized Leather Notebook 📖</h3>
+<p>A beautiful custom journal with a birth flower design, perfect for writing, planning, or keeping special memories.</p>
+<a href="https://a.co/d/0a0VljZh" target="_blank">✨ View Find</a>
+</div>
+
+<div class="shop-item">
+<img src="images/boho-comforter.jpg" alt="Boho Comforter">
+<h3>Boho Farmhouse Comforter 🌿</h3>
+<p>A cozy neutral comforter that creates a warm, relaxed bedroom.</p>
+<a href="https://www.target.com/p/3pcs-tufted-boho-farmhouse-shabby-chic-embroidery-beige-oversized-queen-size-comforter-set-bedsure/-/A-1008335587" target="_blank">✨ View Find</a>
+</div>
+
+<div class="shop-item">
+<img src="images/boho-hair-ties.jpg" alt="Boho Hair Ties">
+<h3>Boho Hair Ties Bracelets 🎀</h3>
+<p>A cute set of braided hair ties that double as bracelets. Perfect for everyday hairstyles and adding a little boho detail.</p>
+<a href="https://a.co/d/09IIrqSz" target="_blank">✨ View Find</a>
+</div>
+
+<div class="shop-item">
+<img src="images/boho-curtains.jpg" alt="Boho Curtains">
+<h3>Boho Floral Blackout Curtains 🌿</h3>
+<p>Soft linen-texture curtains with floral details and tassels for a warm cottage feel.</p>
+<a href="YOUR AMAZON LINK HERE" target="_blank">✨ View Find</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+✨ Made by Patty • 2026 ✨
+</footer>
+
+<script>
+function toggleMusic(){
+
+const music=document.getElementById("backgroundMusic");
+const button=document.getElementById("musicButton");
+
+if(music.paused){
+music.play();
+button.innerHTML="⏸ Pause Music";
+}else{
+music.pause();
+button.innerHTML="🎵 Play Music";
+}
+
 }
 </script>
+
 </body>
 </html>
