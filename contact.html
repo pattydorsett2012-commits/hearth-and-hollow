@@ -7,6 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
+   #musicButton {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: #a3b18a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#musicButton:hover {
+  background: #8ca081;
+}
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
@@ -63,7 +80,28 @@
     footer { text-align: center; padding: 25px; color: #9e9a91; font-size: 14px; }
   </style>
 </head>
+<audio id="backgroundMusic" loop>
+  <source src="cozy-music.mp3" type="audio/mpeg">
+</audio>
 
+<button onclick="toggleMusic()" id="musicButton">
+  🎵 Play Music
+</button>
+
+<script>
+function toggleMusic() {
+  let music = document.getElementById("backgroundMusic");
+  let button = document.getElementById("musicButton");
+
+  if (music.paused) {
+    music.play();
+    button.innerHTML = "⏸ Pause Music";
+  } else {
+    music.pause();
+    button.innerHTML = "🎵 Play Music";
+  }
+}
+</script>
 <body>
 
 <header>
