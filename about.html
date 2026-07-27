@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Hearth & Hollow 🪵🌿</title>
+
   <link rel="icon" type="image/png" href="favicon.png">
-  <!-- Elegant fonts -->
+
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    #musicButton {
-  position: fixed;
-  bottom: 25px;
-  left: 25px;
-  background: #a3b18a;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-}
 
-#musicButton:hover {
-  background: #8ca081;
-}
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
@@ -46,7 +32,10 @@
       color: #5c5a51;
     }
 
-    nav { margin-top: 12px; }
+    nav {
+      margin-top: 12px;
+    }
+
     nav a {
       text-decoration: none;
       color: #7b8a72;
@@ -54,7 +43,10 @@
       margin: 0 15px;
       transition: 0.3s;
     }
-    nav a:hover { color: #a3b18a; }
+
+    nav a:hover {
+      color: #a3b18a;
+    }
 
     .section {
       padding: 60px 25px;
@@ -97,53 +89,44 @@
       color: #c86fa0;
     }
 
+    #musicButton {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #a3b18a;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+      transition: 0.3s;
+    }
+
+    #musicButton:hover {
+      background: #8ca081;
+      transform: translateY(-3px);
+    }
+
     footer {
       text-align: center;
       padding: 25px;
       color: #9e9a91;
       font-size: 14px;
     }
+
   </style>
-<audio id="backgroundMusic" loop>
-  <source src="cozy-music.mp3" type="audio/mpeg">
-</audio>
 
-<button onclick="toggleMusic()" id="musicButton">
-  🎵 Play Music
-</button>
-
-<script>
-function toggleMusic() {
-  let music = document.getElementById("backgroundMusic");
-  let button = document.getElementById("musicButton");
-
-  if (music.paused) {
-    music.play();
-    button.innerHTML = "⏸ Pause Music";
-  } else {
-    music.pause();
-    button.innerHTML = "🎵 Play Music";
-  }
 </head>
 
-<script>
-function toggleMusic() {
-  let music = document.getElementById("backgroundMusic");
-  let button = document.getElementById("musicButton");
-
-  if (music.paused) {
-    music.play();
-    button.innerHTML = "⏸ Pause Music";
-  } else {
-    music.pause();
-    button.innerHTML = "🎵 Play Music";
-  }
-}
-</script>
 <body>
 
 <header>
+
   <h1>Hearth & Hollow 🪵🌿</h1>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -151,30 +134,35 @@ function toggleMusic() {
     <a href="finds.html">Finds</a>
     <a href="contact.html">Contact</a>
   </nav>
+
 </header>
 
 <section class="section">
+
   <div class="card">
+
     <h2>About Me</h2>
+
     <p>
-      
-      Greetings! I am Patty, an enthusiast of ballet, sewing, and crafting aesthetic, boho-inspired creations.  
-      My world is a curated blend of cozy, natural tones, intricate textures, and serene inspiration.
+      Greetings! I'm Patty, and I love ballet, sewing, and creating beautiful boho-inspired projects. Hearth & Hollow is my cozy little corner of the internet where I share things that inspire me and bring me joy.
     </p>
+
   </div>
 
   <div class="card">
+
     <h2>Favorites & Passions</h2>
+
     <p>
-      
-      My favorite color is a serene shade of blue, complemented by earthy greens and muted terracottas.  
-      I delight in creating spaces and objects that evoke tranquility, warmth, and timeless charm.
+      My favorite color is blue, and I love soft earthy tones, flowers, cozy spaces, and beautiful handmade creations. Whether it's ballet, a new hairstyle, or decorating my room, I enjoy finding beauty in the little things.
     </p>
+
   </div>
 
   <div class="memory">
-    🌿 Cherished Memory: Scooter, my dear guinea pig, who brought immeasurable joy and tender companionship. Forever in heart and spirit. 🌿
+    🌿 Cherished Memory: Scooter, my sweet guinea pig, who brought so much happiness into my life. Forever loved and never forgotten. 💙🌿
   </div>
+
 </section>
 
 <footer>
@@ -183,16 +171,17 @@ function toggleMusic() {
 
 <audio id="backgroundMusic" loop>
   <source src="cozy-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
-<button onclick="toggleMusic()" id="musicButton">
+<button id="musicButton" onclick="toggleMusic()">
   🎵 Play Music
 </button>
 
 <script>
 function toggleMusic() {
-  let music = document.getElementById("backgroundMusic");
-  let button = document.getElementById("musicButton");
+  const music = document.getElementById("backgroundMusic");
+  const button = document.getElementById("musicButton");
 
   if (music.paused) {
     music.play();
@@ -203,5 +192,6 @@ function toggleMusic() {
   }
 }
 </script>
+
 </body>
 </html>
