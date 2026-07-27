@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+.gallery {
+  background-color: #f7f1e8;
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.gallery-item {
+  width: 300px;
+  text-align: center;
+  background-color: #fffaf3;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.gallery img {
+  width: 300px;
+  vertical-align: middle;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.gallery-item p {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .gallery-item {
+    width: 90%;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
+<meta charset="UTF-8">
+<title>Gallery • Hearth & Hollow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fffaf5, #fdf6f0);
+      color: #3e3a36;
+    }
+
+    header {
+      background: #fdf6f0;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      color: #5c5a51;
+    }
+
+    nav { margin-top: 12px; }
+    nav a {
+      text-decoration: none;
+      color: #7b8a72;
+      font-weight: 600;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #a3b18a; }
+
+    .section { padding: 60px 25px; max-width: 900px; margin: auto; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover { transform: translateY(-4px); }
+
+    .gallery-item img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 8px;
+    }
+
+   .gallery-item p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7b8a72;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+    footer { text-align: center; padding: 25px; color: #9e9a91; font-size: 14px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌿 Hearth & Hollow</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<section class="section">
+  <h2>Curated Gallery of Inspirations ✨</h2>
+  <p>A collection of my favorite moments, creations, and aesthetic inspirations.</p>
+
+ <div class="gallery">
+
+<div class="gallery-item">
+  <img src="images/hairstyle updo.jpg" alt="Hairstyle Updo" width="300">
+  <p>Elegant Hairstyle 🌿</p>
+</div>
+
+<div class="gallery-item">
+  <img src="images/earrings.jpg" alt="Earrings" width="300">
+  <p>Delicate Jewelry ✨</p>
+</div>
+
+<div class="gallery-item">
+  <img src="images/ballet.jpg" alt="Ballet" width="300">
+  <p>Graceful Ballet Moment 🩰</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+  ✨ Made by Patty • 2026 ✨
+</footer>
+
+</body>
+</html>
