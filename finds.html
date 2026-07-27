@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fdf6f0, #fffaf5);
+      color: #3e3a36;
+    }
+
+    header {
+      background: #fdf6f0;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      color: #5c5a51;
+    }
+
+    nav { margin-top: 12px; }
+    nav a {
+      text-decoration: none;
+      color: #7b8a72;
+      font-weight: 600;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #a3b18a; }
+
+    .section { padding: 60px 25px; max-width: 900px; margin: auto; }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .shop-item {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .shop-item:hover { transform: translateY(-4px); }
+
+    .shop-item img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
+.shop-item a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 24px;
+  background: #a3b18a;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.shop-item a:hover {
+  background: #8ca081;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+    footer { text-align: center; padding: 25px; color: #9e9a91; font-size: 14px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1> Hearth & Hollow 🪵🌿</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="gallery.html">Gallery</a>
+   <a href="finds.html">Finds</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>🌿 Hearth & Hollow Finds</h2>
+<p>
+Welcome to my collection of cozy discoveries! Here you'll find beautiful boho-inspired pieces that I've personally picked because they match the Hearth & Hollow aesthetic. Click any item to visit the original shop.
+</p>
+
+ <div class="shop-item">
+  <img src="images/beige-falla-bow.jpg" alt="Beige Falla Bow">
+  <p>Beige Falla Bow 🎀</p>
+  <a href="https://easy-clothes.us/products/beige-falla-bow?variant=45488363503852" target="_blank">✨ View Find</a>
+</div>
+ <div class="shop-item">
+  <img src="images/personalized-notebook.jpg" alt="Personalized Leather Notebook">
+  <h3>Personalized Leather Notebook 📖</h3>
+  <p>A beautiful custom journal with a birth flower design, perfect for writing, planning, or keeping special memories.</p>
+  <a href="https://a.co/d/0a0VljZh" target="_blank">✨ View Find</a>
+</div>
+ <div class="shop-item">
+  <img src="images/boho-comforter.jpg" alt="Boho Farmhouse Comforter Set">
+  <p><strong>Boho Farmhouse Comforter Set 🌿</strong></p>
+  <p>A cozy neutral comforter that creates a warm, relaxed bedroom.</p>
+  <a href="https://www.target.com/p/3pcs-tufted-boho-farmhouse-shabby-chic-embroidery-beige-oversized-queen-size-comforter-set-bedsure/-/A-1008335587" target="_blank">✨ View Find</a>
+</div>
+
+</section>
+
+<footer>
+  ✨ Made by Patty • 2026 ✨
+</footer>
+
+</body>
+</html>
